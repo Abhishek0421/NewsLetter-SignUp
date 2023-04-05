@@ -32,11 +32,11 @@ app.post("/" , function(req,res){
         ]
     };
     const jsonData = JSON.stringify(data);
-    const url = "https://us8.api.mailchimp.com/3.0/lists/677480f289";
+    const url = "https://us8.api.mailchimp.com/3.0/lists/{list-id}";
 
     const options = {
         method: "POST",
-        auth: "abhishek:f777eaafe3f7a3443ce109517d3ae156-us8"
+        auth: "abhishek:{api-key}"
     }
 
 
@@ -54,7 +54,6 @@ app.listen(process.env.PORT ||3000,function(){
 });
 
 // API Key
-// f777eaafe3f7a3443ce109517d3ae156-us8
+
 
 // audiance Id
-// 677480f289
